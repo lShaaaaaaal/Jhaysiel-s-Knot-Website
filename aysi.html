@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhaysiel's Knot - Crochet Creations</title>
+    <link rel="stylesheet" href="aysi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-crochet"></i>Jhaysiel's Knot</h1>
+                <p>Handmade Crochet Creations</p>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#tutorials" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Beautiful Handmade Crochet Items</h2>
+            <p>Discover unique patterns, tutorials, and handmade creations</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Jhaysiel's Knot</h2>
+                    <p>Welcome to Jhaysiel's Knot, where passion meets creativity in every stitch. Founded in 2025, we specialize in creating beautiful, handmade crochet items that bring warmth and joy to everyday life.</p>
+                    <p>Our journey began with a simple hook and yarn, and has grown into a thriving community of crochet enthusiasts. Each piece is crafted with love and attention to detail, ensuring you receive only the highest quality handmade items.</p>
+                    <p>We believe in sustainable crafting and use eco-friendly materials whenever possible. Our mission is to preserve the art of crochet while bringing modern designs to life.</p>
+                </div>
+                <div class="about-image">
+                    <img src="img/logo.jpg" alt="About Jhaysiel's Knot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-projects" id="tutorials">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="img/flower crochet.jpg" alt="Flower Crochet">
+                    <h3>Flower Crochet</h3>
+                    <p>Adorable crochet perfect for gifts</p>
+                    <a href="#" class="btn-small">View Pattern</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/granny crochet.jpg" alt="Granny Crochet">
+                    <h3>Granny Crochet</h3>
+                    <p>Warm and stylish for your home</p>
+                    <a href="#" class="btn-small">View Pattern</a>
+                </div>
+                <div class="project-card">
+                    <img src="img/heart crochet.jpg" alt="Heart Crochet">
+                    <h3>Heart Crochet</h3>
+                    <p>Perfect accessories for any season</p>
+                    <a href="#" class="btn-small">View Pattern</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Crochet Community</h2>
+            <p>Subscribe to get free patterns, tips, and exclusive offers</p>
+            <form>
+                <input type="email" placeholder="Your email address">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+      <div class="container" id="contact">
+          <div class="footer-section">
+              <h3>Jhaysiel's Knot</h3>
+              <p>Bringing creativity to life one stitch at a time.</p>
+              <!-- Added prominent website link -->
+              <div class="website-link-container">
+                  <a href="https://jhaysielsknot.com" class="website-link" target="_blank">
+                      <i class="fas fa-globe"></i> jhaysielsknot.com
+                  </a>
+              </div>
+          </div>
+          <div class="footer-section">
+              <h3>Information</h3>
+              <p><i class="fas fa-envelope"></i> jhaysielknots@gmail.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> 135 M.A Roxas St. Calumpang, Marikina City</p>
+          </div>
+          <div class="footer-section">
+              <h3>Connect</h3>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com/share/1DufRHxLhL/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/_ysieeee/profilecard/?igsh=bTFsdzN1a2FyZ3Br" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://youtube.com/@jhaysielpantoja6191?si=AfBCq-kRQ9E9jVrb" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="share-section">
+                  <p>Share this website:</p>
+                  <input type="text" id="website-url" value="https://jhaysielsknot.com" readonly>
+                  <button onclick="copyWebsiteUrl()" class="btn-copy">
+                      <i class="fas fa-copy"></i> Copy Link
+                  </button>
+              </div>
+          </div>
+      </div>
+      <div class="copyright">
+          <p>&copy; 2025 Jhaysiel's Knot. All rights reserved.</p>
+      </div>
+  </footer>
+
+  <script>
+      
+      document.querySelector('.mobile-menu').addEventListener('click', function() {
+          document.querySelector('nav ul').classList.toggle('show');
+      });
+
+      
+      function copyWebsiteUrl() {
+          const urlInput = document.getElementById('website-url');
+          urlInput.select();
+          document.execCommand('copy');
+          
+          
+          const copyBtn = document.querySelector('.btn-copy');
+          const originalText = copyBtn.innerHTML;
+          copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+          
+          
+          setTimeout(() => {
+              copyBtn.innerHTML = originalText;
+          }, 2000);
+      }
+
+      
+      document.querySelectorAll('.nav-link').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              if(this.hash) {
+                  e.preventDefault();
+                  document.querySelector(this.hash).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+  </script>
+</body>
+</html>
